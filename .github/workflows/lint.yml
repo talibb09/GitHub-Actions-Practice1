@@ -15,6 +15,11 @@ jobs:
 # this step will automatically cone the code of current branch into runner
       - name: checkout/clone the code
         uses: actions/checkout@v7
+# This step will setup and install python
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
 # this step will install linter
       - name: install linter
         run: pip install ruff
